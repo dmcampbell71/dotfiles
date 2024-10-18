@@ -1,0 +1,40 @@
+# version: 1.0.0
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+#
+continuation_prompt = "[▸▹ ](dimmed white)"
+
+#
+format = """
+$all\
+$fill\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$line_break\
+$character
+"""
+
+[direnv]
+disabled = false
+style = 'yellow'
+loaded_msg = '●'
+unloaded_msg = '◯'
+allowed_msg = '☑'
+not_allowed_msg = '☒'
+denied_msg = '☐'
+
+[fill]
+symbol = ' '
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[nodejs]
+disabled = false
+
+[python]
+symbol = " "
